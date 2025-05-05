@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        h1::before{
+            content: 'hello there :';
+        }
+        h1::after{
+            content: ': welcome to my site';
+        }
+        hi::after:hover{
+            color: green;
+        }
+        ::file-selector-button{
+            border: 2px solid grey;
+            border-radius: 2rem;
+            background-color: lightgrey;
+            color: darkviolet;
+        }
+
+    </style>
+</head>
+<body>
+    <section>
+        <div class="navBar">
+            <ul class="navItems">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact.html">contact</a></li>
+                <li><button>Sign-Up</button></li>
+            </ul>
+        </div>
+    </section>
+    
+    <h1>Stranger</h1>
+    <form action="" id="myform">
+        <label for="name">Upload File</label>
+        <input type="file" title="Upload file">
+    </form>
+</body>
+</html>
