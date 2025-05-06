@@ -15,10 +15,47 @@
             display: flex;
             gap: 1rem;
         }
-        .navBar> ul> li> a:hover{
-            color: bisque;
-  
+        .navBar> ul> li> a{
+            margin-bottom: 28px;
+            padding-bottom: 0;
+            text-decoration: underline;
         }
+        .navBar> ul> li> a:hover{
+            line-height-step: 20px;
+            color: grey;
+            background-color: beige;
+            
+            animation: underline 1s ease-in-out reverse;
+        }
+
+        @keyframes underline {
+            from {
+                padding-bottom: 0;
+            }
+            to {padding-bottom: 30px;}
+        }
+
+        .navBar > ul > li > button {
+            border-radius: 2em;
+            background-color: black;
+            color: brown;
+            animation: mymove 3s infinite;
+        }
+        @keyframes mymove {
+            from {
+                background-color: red;
+                font-size: small;
+            }
+            to {
+                background-color: aliceblue;
+                font-size: medium;
+                color: rgb(232, 39, 39);
+                padding: 3px;
+            }
+        }
+        
+        
+        
     </style>
 </head>
 <body>
@@ -34,11 +71,23 @@ Bonus: A secret action for a double-click or long press 🤫 -->
         <ul class="navItems">
             <li><a href="index.html">Home</a></li>
             <li><a href="contact.html">contact</a></li>
-            <li><button>Sign-Up</button></li>
+            <li><button id="btn">Sign-Up</button></li>
         </ul>
     </div>
 </section>
 
+<section>
+    <p>double click the Sign-Up btn</p>
+    <p>hover on the nav items</p>
+</section>
+
+
+<script>
+    let btn = document.querySelector('#btn');
+    btn.addEventListener('dblclick', ()=>{
+        alert('yooooooo')
+    })
+</script>
     
 </body>
 </html>
